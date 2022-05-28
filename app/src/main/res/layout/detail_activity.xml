@@ -26,11 +26,12 @@
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:text="Yams are generally prepared in different ways in Nigeria. Porridge yam is like the number one way to eat yam in Nigeria. It is major staple food in Nigeria."
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"/>
 
 
 </LinearLayout>

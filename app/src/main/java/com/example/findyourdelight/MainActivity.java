@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         rvListMenu = findViewById(R.id.rvListMenu);
-        tvCode = findViewById(R.id.tvResponseCode);
+//        tvCode = findViewById(R.id.tvResponseCode);
         getMenu();
 
     }
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String responseCode = "Response Code: " + response.code();
                 if (response.isSuccessful()){
                     Toast.makeText(MainActivity.this, responseCode, Toast.LENGTH_SHORT).show();
-                    tvCode.setText(responseCode);
+//                    tvCode.setText(responseCode);
 
                     menuItem = response.body().getResult();
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<MenuResponse> call, Throwable t) {
                 Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-                tvCode.setText(t.getMessage());
+//                tvCode.setText(t.getMessage());
             }
         });
     }
