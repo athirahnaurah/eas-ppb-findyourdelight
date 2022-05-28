@@ -9,6 +9,7 @@ import com.example.findyourdelight.models.RegisterResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface InterfaceApi {
@@ -18,7 +19,8 @@ public interface InterfaceApi {
     @POST("auth/register")
     Call<RegisterResponse> postRegister(@Body BodyRegister bodyRegister);
 
-    @GET("/menu")
+    @Headers("Content-Type: application/json")
+    @GET("menu")
     Call<MenuResponse> getAllMenu();
 
 }

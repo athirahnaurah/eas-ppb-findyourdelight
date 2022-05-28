@@ -20,6 +20,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.LoginActivity" />
         </activity>
+        <activity android:name=".activities.DetailActivity"
+            android:exported="true"/>
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true">

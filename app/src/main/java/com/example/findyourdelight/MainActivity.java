@@ -13,7 +13,10 @@ import com.example.findyourdelight.adapter.MenuAdapter;
 import com.example.findyourdelight.api.RestClient;
 import com.example.findyourdelight.models.MenuResponse;
 import com.example.findyourdelight.models.ResultItem;
+import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.util.List;

@@ -1,0 +1,36 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/tvDetailName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Pounded yam"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/imgDetail"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Yams are generally prepared in different ways in Nigeria. Porridge yam is like the number one way to eat yam in Nigeria. It is major staple food in Nigeria."
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"/>
+
+
+</LinearLayout>
