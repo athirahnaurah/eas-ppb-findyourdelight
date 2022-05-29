@@ -1,9 +1,11 @@
 package com.example.findyourdelight;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +25,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,12 +39,27 @@ public class MainActivity extends AppCompatActivity {
     private MenuAdapter menuAdapter;
     private RecyclerView rvListMenu;
     private FloatingActionButton fabCreateMenu;
-
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return false;
+            }
+        });
 
         rvListMenu = findViewById(R.id.rvListMenu);
         fabCreateMenu = findViewById(R.id.fabAddMenu);
@@ -54,6 +73,20 @@ public class MainActivity extends AppCompatActivity {
         });
         getMenu();
 
+    }
+
+    private void filterList(String text) {
+        List<ResultItem> filteredList = new ArrayList<>();
+        for (ResultItem resultItem : menuItem){
+            if(resultItem.getMenuname().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(resultItem);
+            }
+        }
+        if (filteredList.isEmpty()){
+            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+        } else {
+            menuAdapter.setFilteredList(filteredList);
+        }
     }
 
     private void getMenu(){

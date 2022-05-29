@@ -30,6 +30,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         this.context = context;
     }
 
+    public void setFilteredList(List<ResultItem> filteredList){
+        this.menuItem = filteredList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
