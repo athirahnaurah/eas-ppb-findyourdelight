@@ -45,16 +45,17 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 BodyLogin bodyLogin = new BodyLogin();
                 bodyLogin.setUsername(etUsername.getText().toString());
                 bodyLogin.setPassword(etPassword.getText().toString());
-
                 RestClient.getService().postLogin(bodyLogin).enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         String responseCode = "Response Code: " + response.code();
                         switch(response.code()){
                             case 200 :
+                                RestClient.token = response.body().getToken();
                                 Toast.makeText(LoginActivity.this, responseCode, Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 break;

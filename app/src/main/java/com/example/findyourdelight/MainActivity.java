@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.findyourdelight.activities.CreateMenuActivity;
 import com.example.findyourdelight.activities.LoginActivity;
 import com.example.findyourdelight.adapter.MenuAdapter;
 import com.example.findyourdelight.api.RestClient;
 import com.example.findyourdelight.models.MenuResponse;
 import com.example.findyourdelight.models.ResultItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private List<ResultItem> menuItem;
     private MenuAdapter menuAdapter;
     private RecyclerView rvListMenu;
-    private TextView tvCode;
+    private FloatingActionButton fabCreateMenu;
 
 
     @Override
@@ -39,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         rvListMenu = findViewById(R.id.rvListMenu);
-//        tvCode = findViewById(R.id.tvResponseCode);
+        fabCreateMenu = findViewById(R.id.fabAddMenu);
+        fabCreateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CreateMenuActivity.class);
+                startActivity(intent);
+                MainActivity.this.finish();
+            }
+        });
         getMenu();
 
     }
@@ -51,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 String responseCode = "Response Code: " + response.code();
                 if (response.isSuccessful()){
                     Toast.makeText(MainActivity.this, responseCode, Toast.LENGTH_SHORT).show();
-//                    tvCode.setText(responseCode);
 
                     menuItem = response.body().getResult();
 
@@ -64,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<MenuResponse> call, Throwable t) {
                 Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-//                tvCode.setText(t.getMessage());
             }
         });
     }
