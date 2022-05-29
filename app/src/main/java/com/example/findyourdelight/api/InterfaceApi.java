@@ -15,6 +15,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface InterfaceApi {
@@ -32,4 +33,7 @@ public interface InterfaceApi {
             @Path("id") String id,
             @Body BodyCreateMenu bodyMenu
             );
+
+    @PUT("menu/{id}")
+    Call<CreateMenuResponse> updateMenu(@Path("id") String id, @Body BodyCreateMenu bodyUpdateMenu);
 }

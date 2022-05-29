@@ -2,6 +2,7 @@ package com.example.findyourdelight.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView tvName = findViewById(R.id.tvDetailName);
         TextView tvDesc = findViewById(R.id.tvDescription);
         ImageView imgFood = findViewById(R.id.imgDetail);
+        ImageView btnEdit = findViewById(R.id.btnEdit);
 
         Intent item = getIntent();
         item.getStringExtra("image");
@@ -31,6 +33,15 @@ public class DetailActivity extends AppCompatActivity {
 
         tvName.setText(vName);
         tvDesc.setText(vDesc);
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this, UpdateMenuActivity.class);
+                startActivity(intent);
+                DetailActivity.this.finish();
+            }
+        });
     }
 
 }

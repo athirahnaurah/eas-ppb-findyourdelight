@@ -33,5 +33,12 @@
         android:layout_marginTop="30dp"
         android:textAlignment="center"/>
 
+    <!--  button dipindahin ke kanan bawah (android:layout_marginTop="200dp")  -->
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="38dp"
+        android:layout_height="43dp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_edit" />
 
 </LinearLayout>
