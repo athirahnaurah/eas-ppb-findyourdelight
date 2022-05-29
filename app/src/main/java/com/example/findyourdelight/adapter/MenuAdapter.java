@@ -54,6 +54,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
                 item.putExtra("image",currentMenu.getImages().get(1));
                 item.putExtra("name",currentMenu.getMenuname());
                 item.putExtra("desc",currentMenu.getDescription());
+                item.putExtra("id",currentMenu.getId());
                 context.startActivity(item);
             }
         });

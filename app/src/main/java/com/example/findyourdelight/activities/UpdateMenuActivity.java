@@ -22,6 +22,7 @@ import retrofit2.Response;
 public class UpdateMenuActivity extends AppCompatActivity {
     private EditText menuName, menuDesc;
     private Button btnSave;
+    String _Name, _Desc, _Id;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,15 @@ public class UpdateMenuActivity extends AppCompatActivity {
         menuDesc = findViewById(R.id.edtDescription);
         btnSave = findViewById(R.id.btnSave);
 
+        Intent item = getIntent();
+        item.getStringExtra("image");
+        _Name = item.getStringExtra("name");
+        _Desc = item.getStringExtra("desc");
+        _Id = item.getStringExtra("id");
+
+        menuName.setText(_Name);
+        menuDesc.setText(_Desc);
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +49,7 @@ public class UpdateMenuActivity extends AppCompatActivity {
                 bodyUpdateMenu.setMenuname(menuName.getText().toString());
                 bodyUpdateMenu.setDescription(menuDesc.getText().toString());
 
-                RestClient.getService().updateMenu("5f5eccf4e923d0aca3e7d441",bodyUpdateMenu).enqueue(new Callback<CreateMenuResponse>() {
+                RestClient.getService().updateMenu(_Id,bodyUpdateMenu).enqueue(new Callback<CreateMenuResponse>() {
                     @Override
                     public void onResponse(Call<CreateMenuResponse> call, Response<CreateMenuResponse> response) {
                         if (!response.isSuccessful()){

@@ -14,7 +14,7 @@ import com.example.findyourdelight.models.ResultItem;
 
 public class DetailActivity extends AppCompatActivity {
     MenuAdapter menuAdapter;
-    String vName, vDesc;
+    String vName, vDesc, vId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
         item.getStringExtra("image");
         vName = item.getStringExtra("name");
         vDesc = item.getStringExtra("desc");
+        vId = item.getStringExtra("id");
 
         tvName.setText(vName);
         tvDesc.setText(vDesc);
@@ -38,6 +39,9 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailActivity.this, UpdateMenuActivity.class);
+                intent.putExtra("name",vName);
+                intent.putExtra("desc",vDesc);
+                intent.putExtra("id",vId);
                 startActivity(intent);
                 DetailActivity.this.finish();
             }
