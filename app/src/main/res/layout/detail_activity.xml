@@ -14,11 +14,10 @@
         android:textStyle="bold"
         android:layout_marginTop="20dp"/>
 
-    <ImageView
-        android:id="@+id/imgDetail"
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/daimajia_slider_image"
         android:layout_width="320dp"
         android:layout_height="200dp"
-        android:src="@mipmap/ic_launcher"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>
 

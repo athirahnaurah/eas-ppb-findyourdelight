@@ -51,7 +51,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent item =new Intent(context, DetailActivity.class);
-                item.putExtra("image",currentMenu.getImages().get(1));
+                item.putExtra("image1",currentMenu.getImages().get(0));
+                item.putExtra("image2",currentMenu.getImages().get(1));
+                item.putExtra("image3",currentMenu.getImages().get(2));
                 item.putExtra("name",currentMenu.getMenuname());
                 item.putExtra("desc",currentMenu.getDescription());
                 item.putExtra("id",currentMenu.getId());
