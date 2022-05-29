@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.findyourdelight.activities.CreateMenuActivity;
+import com.example.findyourdelight.activities.FavoritesActivity;
 import com.example.findyourdelight.activities.LoginActivity;
 import com.example.findyourdelight.adapter.MenuAdapter;
 import com.example.findyourdelight.api.RestClient;
@@ -127,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.favorites:
-                //Intent f = new Intent(MainActivity.this, FavoritesActivity.class);
-                //startActivity(f);
+                Intent f = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(f);
                 break;
         }
         return super.onOptionsItemSelected(item);

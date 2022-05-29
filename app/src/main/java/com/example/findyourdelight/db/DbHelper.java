@@ -74,7 +74,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public ArrayList<Result> getAllMovies(){
+    public ArrayList<Result> getAllMenus(){
         ArrayList<Result> menuModelArrayList = new ArrayList<Result>();
 
         String selectQuery = "SELECT * FROM " + TABLE_MENUS;
