@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Find Your Delight</string>
+
+    <string name="favorite_plural">Favorites</string>
+    <string name="favorite_singular">Favorite</string>
+
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="remove_from_favorites">Remove from favorites</string>
+
+    <string name="added_to_favorites">Added to favorites!</string>
+    <string name="removed_from_favorites">Removed from favorites!</string>
+    <string name="add_err">Failed to add</string>
+    <string name="remove_err">Failed to remove</string>
+
+    <string name="id_err">ID tidak bisa kosong</string>
+    <string name="name_err">Nama menu tidak bisa kosong</string>
+    <string name="desc_err">Deskripsi tidak bisa kosong</string>
+
 </resources>

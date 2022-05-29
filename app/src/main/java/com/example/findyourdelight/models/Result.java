@@ -63,8 +63,8 @@ public class Result{
 		return description;
 	}
 
-	public void setId(String id){
-		this.id = id;
+	public void setId(int id){
+		this.id = String.valueOf(id);
 	}
 
 	public String getId(){
