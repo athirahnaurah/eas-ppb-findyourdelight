@@ -6,7 +6,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.example.findyourdelight.MainActivity;
+import com.example.findyourdelight.activities.DetailActivity;
 import com.example.findyourdelight.models.Result;
 
 import java.util.ArrayList;
@@ -57,20 +61,45 @@ public class DbHelper extends SQLiteOpenHelper {
 
     public void deleteMenu(String id){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.delete(TABLE_MENUS, KEY_ID + " = ?",
-                new String[]{String.valueOf(id)});
+        sqLiteDatabase.delete(TABLE_MENUS, KEY_ID + " = ?", new String[]{id});
     }
 
-    public boolean checkMenu(String id){
+    public boolean checkMenu(String _id){
+        boolean result = false;
+        String id =  "\""+_id+"\"";;
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
-        String findQuery = "SELECT * FROM " + TABLE_MENUS + " WHERE id=" + id;
+        String findQuery = "SELECT * FROM " + TABLE_MENUS + " WHERE id = "+ id;
         Cursor c = sqLiteDatabase.rawQuery(findQuery, null);
-        if (c.getCount() <= 0){
-            c.close();
-            return false;
+        if (c.getCount()==0){
+            return false; //add visible
+        }else{
+            return true; // remove visible
         }
-        c.close();
-        return true;
+
+//        if (c.moveToFirst()) {
+//            do {
+//
+//                int rowNumber = c.getColumnIndex("id");
+//                String idDb = c.getString(rowNumber);
+//            } while (c.moveToNext());
+//        }
+//        if(c == null){
+//            result = false;
+//        }else {
+//            result = true;
+//        }
+//        Log.d("DbHelper",findQuery);
+//        return result;
+
+//        }
+//        Cursor c = sqLiteDatabase.rawQuery(findQuery, null);
+//        if (c.getCount()==0){
+//            c.close();
+//            return false;
+//        }else{
+//            c.close();
+//            return true;
+//        }
     }
 
     @SuppressLint("Range")

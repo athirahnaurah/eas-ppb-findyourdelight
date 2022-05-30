@@ -82,22 +82,17 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-//        Bundle extras = getIntent().getExtras();
-//
-//        String id = extras.getString("id");
-//        String menuname = extras.getString("menuname");
-//        String description = extras.getString("description");
-
         Button btnAdd = (Button) findViewById(R.id.addToFavorites);
         Button btnDelete = (Button) findViewById(R.id.removeFromFavorites);
 
-//        if (dbHelper.checkMenu(vId)){
-//            btnAdd.setVisibility(View.GONE);
-//            btnDelete.setVisibility(View.VISIBLE);
-//        } else {
-//            btnAdd.setVisibility(View.VISIBLE);
-//            btnDelete.setVisibility(View.GONE);
-//        }
+        if (dbHelper.checkMenu(vId)){
+            btnAdd.setVisibility(View.GONE);
+            btnDelete.setVisibility(View.VISIBLE);
+            Toast.makeText(DetailActivity.this,"id ada",Toast.LENGTH_SHORT).show();
+        } else {
+            btnAdd.setVisibility(View.VISIBLE);
+            btnDelete.setVisibility(View.GONE);
+        }
 
         btnAdd.setOnClickListener(v -> {
             if (vId.isEmpty()){
