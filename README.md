@@ -8,15 +8,14 @@
 
 <img src="demoapp.gif" align="right" width="32%"/>
 
-# Programming tech
+# Programming technique
 
 - [Java](https://www.java.com/en/) based.
 - Recyclerview - Display large sets of menu data in your UI while minimizing memory usage.
 - SQLite - Store favorite menu data in the user's device.
-- Retrofit2 & OkHttp3 - Construct the REST APIs.
-- [RestaurantListingAPI](https://documenter.getpostman.com/view/12204297/TVKJwEWL#85736293-
-  0c3e-49ed-a098-dfb69d521de2) - consume restaurant listing API
-- [Daimajia](https://github.com/daimajia/AndroidImageSlider)- Create an image slider
+- [Retrofit2 & OkHttp3](https://github.com/square/retrofit) - Construct the REST APIs.
+- [RestaurantListingAPI](https://documenter.getpostman.com/view/12204297/TVKJwEWL#85736293-0c3e-49ed-a098-dfb69d521de2) - consume restaurant listing API
+- [Daimajia](https://github.com/daimajia/AndroidImageSlider) - Create an image slider
 </br>
 </br>
 <p>📲 Install this <a href="https://drive.google.com/file/d/1iKtpHABeqXINkYeRW6mWnel-QzFZUkfp/view?usp=sharing">application</a></p>
