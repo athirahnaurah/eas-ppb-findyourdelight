@@ -15,5 +15,9 @@
     <string name="id_err">ID tidak bisa kosong</string>
     <string name="name_err">Nama menu tidak bisa kosong</string>
     <string name="desc_err">Deskripsi tidak bisa kosong</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="edit_menu">Edit Menu</string>
+    <string name="description">Yams are generally prepared in different ways in Nigeria. Porridge yam is like the number one way to eat yam in Nigeria. It is major staple food in Nigeria.</string>
+    <string name="menu_name">Pounded yam</string>
 
 </resources>

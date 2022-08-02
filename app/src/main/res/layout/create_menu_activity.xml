@@ -2,7 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/background2"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image1"
+        android:id="@+id/img3"/>
 
     <TextView
         android:id="@+id/tvMenuCreate"
@@ -11,17 +18,23 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:text="Menu Name"
-        android:textSize="24dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/dosisregular"
         android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edtMenuCreate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:padding="10dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/dosisregular"
         android:hint="Enter Menu"/>
+
     <TextView
         android:id="@+id/tvDescCreate"
         android:layout_width="match_parent"
@@ -30,24 +43,34 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Menu Description"
-        android:textSize="24dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/dosisregular"
         android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edtDescCreate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:padding="10dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/dosisregular"
         android:hint="Enter description"/>
 
     <Button
         android:id="@+id/btnCreate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:text="create menu"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:fontFamily="@font/dosisregular"
+        android:textStyle="bold"
+        android:background="@drawable/button_shape"/>
 
 </LinearLayout>

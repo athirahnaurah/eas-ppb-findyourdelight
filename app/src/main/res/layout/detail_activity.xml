@@ -1,68 +1,81 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:background="@mipmap/background2"
     android:layout_centerHorizontal="true">
+
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/daimajia_slider_image"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/tvDetailName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Pounded yam"
+       android:padding="8dp"
+        android:text="@string/menu_name"
         android:textSize="24dp"
         android:textStyle="bold"
+        android:fontFamily="@font/dosisregular"
         android:layout_marginTop="20dp"/>
-
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/daimajia_slider_image"
-        android:layout_width="320dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
 
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:text="Yams are generally prepared in different ways in Nigeria. Porridge yam is like the number one way to eat yam in Nigeria. It is major staple food in Nigeria."
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
+        android:text="@string/description"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/addToFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/dosisregular"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:textAlignment="center"/>
+        android:text="@string/add_to_favorites"
+        android:visibility="visible" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="80dp">
+    <Button
+        android:id="@+id/removeFromFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/dosisregular"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:text="@string/remove_from_favorites"/>
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/dosisregular"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/edit_menu"
+        android:visibility="visible" />
 
-        <Button
-            android:id="@+id/addToFavorites"
-            android:layout_width="276dp"
-            android:layout_height="wrap_content"
-            android:text="@string/add_to_favorites"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/removeFromFavorites"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:text="@string/remove_from_favorites"/>
-
-        <ImageView
-            android:id="@+id/btnEdit"
-            android:layout_width="41dp"
-            android:layout_height="43dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/ic_edit" />
-
-    </LinearLayout>
-
+<!--    <ImageView-->
+<!--        android:id="@+id/btnEdit"-->
+<!--        android:layout_width="41dp"-->
+<!--        android:layout_height="43dp"-->
+<!--        android:layout_gravity="right"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:src="@drawable/ic_edit" />-->
 
 </LinearLayout>

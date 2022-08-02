@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                         switch(response.code()){
                             case 200 :
                                 RestClient.token = response.body().getToken();
-                                Toast.makeText(LoginActivity.this, responseCode, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 break;
                             case 401 :

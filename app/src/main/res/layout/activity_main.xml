@@ -4,54 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/background"
     tools:context=".MainActivity">
 
-<!--    <EditText-->
-<!--        android:id="@+id/edtSearch"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        app:layout_constraintHorizontal_bias="0.144"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toLeftOf="@+id/imgSearch"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imgSearch"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginRight="30dp"-->
-<!--        android:layout_marginTop="26dp"-->
-<!--        android:src="@drawable/ic_search"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:layout_editor_absoluteY="9dp" />-->
+    <TextView
+        android:id="@+id/tvMyMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="12dp"
+        android:text="My Menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        android:fontFamily="@font/dosisregular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/teal_200"/>
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:background="@drawable/search_view_bg"
         app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@+id/rvListMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/search_view_bg"
-        app:queryHint="Cari disini" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMyMenu"
+        app:queryHint="Search Here" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListMenu"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:layout_constraintVertical_bias="0.03"></androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddMenu"
@@ -61,11 +54,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:tint="@color/white"
         android:tintMode="src_in"
-        app:backgroundTint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add_white" />
+        app:srcCompat="@drawable/ic_add_white"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

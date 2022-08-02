@@ -37,7 +37,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView tvName = findViewById(R.id.tvDetailName);
         TextView tvDesc = findViewById(R.id.tvDescription);
         sliderLayout = findViewById(R.id.daimajia_slider_image);
-        ImageView btnEdit = findViewById(R.id.btnEdit);
+        Button btnEdit = findViewById(R.id.btnEdit);
 
         Intent item = getIntent();
         vImg1 = item.getStringExtra("image1");

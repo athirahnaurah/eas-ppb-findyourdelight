@@ -1,52 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity"
-    android:orientation="vertical"
-    android:layout_margin="25dp"
-    android:gravity="center">
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/img1"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:textSize="24dp"
+        android:layout_below="@id/img1"
+        android:text="@string/welcome"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:fontFamily="@font/dosisregular"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:id="@+id/tvTitleLogin"/>
 
-    <EditText
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/tvTitleLogin"
+        android:src="@drawable/logo1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/img2"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:id="@+id/edtUsername"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/img2"
+        android:orientation="vertical"
+        android:padding="30dp">
 
-    <EditText
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:id="@+id/edtPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:hint="Enter Username"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:fontFamily="@font/dosisregular"
+            android:id="@+id/edtUsername"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/btnLogin"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:hint="Enter Password"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dosisregular"
+            android:id="@+id/edtPassword"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="\nOr\n"
-        android:textAlignment="center" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Login"
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dosisregular"
+            android:textStyle="bold"
+            android:background="@drawable/button_shape" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRegister"
-        android:text="Sign up"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nOr\n"
+            android:textAlignment="center" />
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/btnRegister"
+            android:text="Sign up"
+            android:fontFamily="@font/dosisregular"
+            android:textStyle="bold"
+            android:background="@drawable/button_shape"/>
+
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="LOGIN"-->
+<!--        android:textSize="24dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAlignment="center"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Username"-->
+<!--        android:id="@+id/edtUsername"/>-->
+
+<!--    <EditText-->
+<!--        android:inputType="textPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Password"-->
+<!--        android:id="@+id/edtPassword"/>-->
+
+
+
+</RelativeLayout>

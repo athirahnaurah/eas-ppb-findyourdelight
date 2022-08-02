@@ -1,47 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="25dp"
-    android:gravity="center">
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/img3"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIGN UP"
-        android:textSize="24dp"
+        android:layout_below="@id/img3"
+        android:text="Create Your Account"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:fontFamily="@font/dosisregular"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:id="@+id/tvTitleRegister"/>
 
-    <EditText
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edtEmail"
-        android:hint="Email"/>
+        android:layout_below="@id/tvTitleRegister"
+        android:text="Let's help you to find your meal!"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dosisregular"
+        android:textColor="@color/black"
+        android:id="@+id/tvTitleRegister2"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtUsernameReg"
-        android:hint="Username"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitleRegister2"
+        android:orientation="vertical"
+        android:padding="30dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtPhoneNumber"
-        android:hint="Phone Number"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/edtEmail"
+            android:hint="Email"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/dosisregular"
+            android:textSize="16sp"/>
 
-    <EditText
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtPasswordReg"
-        android:hint="Password"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSignUp"
-        android:text="Sign up"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/edtUsernameReg"
+            android:hint="Username"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/dosisregular"
+            android:textSize="16sp"/>
 
-</LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/edtPhoneNumber"
+            android:hint="Phone Number"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/dosisregular"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/edtPasswordReg"
+            android:hint="Password"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/dosisregular"
+            android:textSize="16sp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSignUp"
+            android:text="Sign up"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/dosisregular"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
