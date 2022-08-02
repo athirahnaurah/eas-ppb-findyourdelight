@@ -67,15 +67,12 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-//        private ImageView imgFood;
         private TextView tvMenuName;
-//        private LinearLayout layoutView;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            imgFood = itemView.findViewById(R.id.img_avatar);
             tvMenuName = itemView.findViewById(R.id.tvName);
-//            layoutView = itemView.findViewById(R.id.layout_menu_item);
         }
     }
 }

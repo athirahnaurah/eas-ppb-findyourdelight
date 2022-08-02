@@ -88,7 +88,6 @@ public class DetailActivity extends AppCompatActivity {
         if (dbHelper.checkMenu(vId)){
             btnAdd.setVisibility(View.GONE);
             btnDelete.setVisibility(View.VISIBLE);
-            Toast.makeText(DetailActivity.this,"id ada",Toast.LENGTH_SHORT).show();
         } else {
             btnAdd.setVisibility(View.VISIBLE);
             btnDelete.setVisibility(View.GONE);
