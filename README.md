@@ -18,4 +18,3 @@
 - [Daimajia](https://github.com/daimajia/AndroidImageSlider) - Create an image slider
 </br>
 </br>
-<p>📲 Install this <a href="https://drive.google.com/file/d/1iKtpHABeqXINkYeRW6mWnel-QzFZUkfp/view?usp=sharing">application</a></p>
